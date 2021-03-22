@@ -1,0 +1,7 @@
+{
+  "name": "LPES",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
