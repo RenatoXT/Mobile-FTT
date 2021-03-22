@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react'
 
 import { skullOutline} from 'ionicons/icons';
 import { IonContent, IonPage, IonIcon, IonGrid, IonRow,
-         IonCol, IonCard, IonCardTitle,
-         IonCardContent, IonItem, IonButton, IonLoading  } from '@ionic/react';
+         IonCol, IonCard, IonCardTitle, IonHeader, IonToolbar,
+         IonCardContent, IonItem, IonButton, IonLoading, IonTitle, IonText } from '@ionic/react';
 
 import { GetInsult } from '../../hooks/getInsult';
 
@@ -20,6 +20,13 @@ const EvilInsultGenerator: React.FC = () => {
 
   return (
     <IonPage>
+
+      <IonHeader>
+        <IonToolbar>
+          <IonTitle>Hell Pills</IonTitle>
+          <IonText>Essa feature foi implementada usando a API "Evil Insult Generator"</IonText>
+        </IonToolbar>
+      </IonHeader>
 
       <IonContent fullscreen>
 
