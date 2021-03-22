@@ -1,0 +1,55 @@
+
+ion-grid {
+    height: 100%;
+    background: url('../../assets/images/tab1_background.jpeg') no-repeat center center/cover;
+}
+
+ion-row {
+    height: 100%;
+    align-content: center;
+}
+
+ion-col {
+    display: flex;
+    justify-content: center;
+}
+
+ion-card {
+    padding: 0.5rem;
+
+    min-width: 23rem;
+    min-height: 7rem;
+
+	--background:
+        repeating-linear-gradient(
+                45deg, rgba(255, 255, 255, 0) 1px,
+                rgba(255, 255, 255, 0.03) 2px,
+                rgba(255, 255, 255, 0.04) 3px,
+                rgba(255, 255, 255, 0.05) 4px),
+        -webkit-linear-gradient(
+                -245deg,
+                rgba(255, 255, 255, 1) 40%,
+                rgba(255, 255, 255, 0.95) 70%,
+                rgba(255, 255, 255, 0.9) 90%);
+
+}
+
+ion-item {
+    --background: transparent;
+}
+
+.card-content-md {
+    font-size:  1rem;
+}
+
+/* .insult-spinner {
+    color: #FFF
+} */
+
+@media only screen and (max-width: 400px) {
+
+    *  {
+       font-size:  0.9rem;
+    }
+
+ }
