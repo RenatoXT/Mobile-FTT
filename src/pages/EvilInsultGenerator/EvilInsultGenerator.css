@@ -1,20 +1,32 @@
-
-ion-grid {
+.first-tab-content > ion-grid {
     height: 100%;
     background: url('../../assets/images/tab1_background.jpeg') no-repeat center center/cover;
 }
 
-ion-row {
+.first-tab-header > ion-toolbar , .first-tab-page > ion-header{
+    --background: transparent;
+}
+
+.first-tab-header > ion-toolbar > ion-title {
+    color: #FFF;
+}
+
+.first-tab-header > ion-toolbar > ion-text {
+    margin-left: 1.25rem;
+    color: #FFFFFF88;
+}
+
+.first-tab-content > ion-grid > ion-row {
     height: 100%;
     align-content: center;
 }
 
-ion-col {
+.first-tab-content > ion-grid > ion-row > ion-col {
     display: flex;
     justify-content: center;
 }
 
-ion-card {
+.first-tab-content > ion-grid > ion-row > ion-col > ion-card {
     padding: 0.5rem;
 
     min-width: 23rem;
@@ -34,7 +46,7 @@ ion-card {
 
 }
 
-ion-item {
+.first-tab-content > ion-grid > ion-row > ion-col > ion-card > ion-item {
     --background: transparent;
 }
 
@@ -42,19 +54,6 @@ ion-item {
     font-size:  1rem;
     --color: #000;
 
-}
-
-ion-toolbar, ion-header{
-    --background: transparent;
-}
-
-ion-title {
-    color: #FFF;
-}
-
-ion-text {
-    margin-left: 1.25rem;
-    color: #FFFFFF88;
 }
 
 @media only screen and (max-width: 400px) {

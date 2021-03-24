@@ -19,18 +19,18 @@ const EvilInsultGenerator: React.FC = () => {
 }, [newInsult]);
 
   return (
-    <IonPage>
+    <IonPage class="first-tab-page">
 
-      <IonHeader>
+      <IonHeader class="first-tab-header">
         <IonToolbar>
           <IonTitle>Hell Pills</IonTitle>
           <IonText>Essa feature foi implementada usando a API "Evil Insult Generator"</IonText>
         </IonToolbar>
       </IonHeader>
 
-      <IonContent fullscreen>
+      <IonContent class="first-tab-content" fullscreen>
 
-        <IonGrid>
+        <IonGrid >
           <IonRow>
             <IonCol>
               <IonCard>

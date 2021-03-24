@@ -9,11 +9,11 @@ import {
   IonTabs,
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, square, warning } from 'ionicons/icons';
+import { ellipse, square, warning, textOutline } from 'ionicons/icons';
 
 
 import EvilInsultGenerator from './pages/EvilInsultGenerator/EvilInsultGenerator';
-import Tab2 from './pages/Tab2';
+import YodaTextTranslator from './pages/yodaTranslator/YodaTextTranslator';
 import Tab3 from './pages/Tab3';
 
 /* Core CSS required for Ionic components to work properly */
@@ -39,34 +39,44 @@ import './theme/global.css'
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
+
       <IonTabs>
+
         <IonRouterOutlet>
           <Route exact path="/sinner">
             <EvilInsultGenerator />
           </Route>
-          <Route exact path="/tab2">
-            <Tab2 />
+
+          <Route exact path="/yoda">
+            <YodaTextTranslator />
           </Route>
+
           <Route path="/tab3">
             <Tab3 />
           </Route>
+
           <Route exact path="/">
             <Redirect to="/sinner" />
           </Route>
         </IonRouterOutlet>
+
+
         <IonTabBar slot="bottom">
           <IonTabButton tab="sinner" href="/sinner">
             <IonIcon icon={warning} />
             <IonLabel>Sinner</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon icon={ellipse} />
-            <IonLabel>Tab 2</IonLabel>
+
+          <IonTabButton tab="yoda" href="/yoda">
+            <IonIcon icon={textOutline} />
+            <IonLabel>Yoda</IonLabel>
           </IonTabButton>
+
           <IonTabButton tab="tab3" href="/tab3">
             <IonIcon icon={square} />
             <IonLabel>Tab 3</IonLabel>
           </IonTabButton>
+
         </IonTabBar>
       </IonTabs>
     </IonReactRouter>
