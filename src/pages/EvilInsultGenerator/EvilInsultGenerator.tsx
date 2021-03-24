@@ -57,17 +57,7 @@ const EvilInsultGenerator: React.FC = () => {
 
           </IonRow>
         </IonGrid>
-
-
-
-        {/* <IonFab vertical="bottom" horizontal="end" slot="fixed">
-          <IonFabButton onClick={() => requestInsult()}>
-            <IonIcon icon={sad}></IonIcon>
-          </IonFabButton>
-        </IonFab> */}
-
       </IonContent>
-
     </IonPage>
   );
 };

@@ -13,8 +13,8 @@ import { ellipse, square, warning, textOutline } from 'ionicons/icons';
 
 
 import EvilInsultGenerator from './pages/EvilInsultGenerator/EvilInsultGenerator';
-import YodaTextTranslator from './pages/yodaTranslator/YodaTextTranslator';
-import Tab3 from './pages/Tab3';
+import YodaTextTranslator from './pages/YodaTextTranslator/YodaTextTranslator';
+import ChuckRandomJokes from './pages/ChuckRandomJokes/ChuckRandomJokes';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -36,6 +36,9 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import './theme/global.css'
 
+// TO_DO
+// On_Close() --> add hell
+
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
@@ -51,8 +54,8 @@ const App: React.FC = () => (
             <YodaTextTranslator />
           </Route>
 
-          <Route path="/tab3">
-            <Tab3 />
+          <Route path="/chuck">
+            <ChuckRandomJokes />
           </Route>
 
           <Route exact path="/">
@@ -72,9 +75,9 @@ const App: React.FC = () => (
             <IonLabel>Yoda</IonLabel>
           </IonTabButton>
 
-          <IonTabButton tab="tab3" href="/tab3">
+          <IonTabButton tab="ChuckRandomJokes" href="/chuck">
             <IonIcon icon={square} />
-            <IonLabel>Tab 3</IonLabel>
+            <IonLabel>Chuck Norris</IonLabel>
           </IonTabButton>
 
         </IonTabBar>
