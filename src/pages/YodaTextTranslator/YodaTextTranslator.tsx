@@ -18,19 +18,6 @@ const YodaTextTranslator: React.FC = () => {
   const [text, setText] = useState<string>("");
   const [showLoading, setShowLoading] = useState(false);
 
-  // Sugiro  fazer um acompanhamento pra entender o código 💚
-  //
-  // Bolo de Caneca
-  //
-  // 1min 15s no microondas
-  //
-  // 4 Colheres de sopa de farinha de trigo
-  // 2 colheres de sopa de achocolato
-  // 1 Colher de chá de fermento químico
-  // 4 Colheres de sopa de Leite
-  // 2 Colheres de sopa de oleo
-
-
   useEffect(() => {
     setShowLoading(false)
   }, [newTranslate]);

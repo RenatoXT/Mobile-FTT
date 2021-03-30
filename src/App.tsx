@@ -14,6 +14,7 @@ import { ellipse, square, warning, textOutline } from 'ionicons/icons';
 
 import EvilInsultGenerator from './pages/EvilInsultGenerator/EvilInsultGenerator';
 import YodaTextTranslator from './pages/YodaTextTranslator/YodaTextTranslator';
+import DiscoveryDoggo from './pages/DiscoveryDoggo/DiscoveryDoggo';
 import ChuckRandomJokes from './pages/ChuckRandomJokes/ChuckRandomJokes';
 
 /* Core CSS required for Ionic components to work properly */
@@ -58,6 +59,10 @@ const App: React.FC = () => (
             <ChuckRandomJokes />
           </Route>
 
+          <Route exact path="/doggo">
+            <DiscoveryDoggo />
+          </Route>
+
           <Route exact path="/">
             <Redirect to="/sinner" />
           </Route>
@@ -65,6 +70,7 @@ const App: React.FC = () => (
 
 
         <IonTabBar slot="bottom">
+
           <IonTabButton tab="sinner" href="/sinner">
             <IonIcon className="devil-icon" />
             <IonLabel>Sinner</IonLabel>
@@ -78,6 +84,11 @@ const App: React.FC = () => (
           <IonTabButton tab="ChuckRandomJokes" href="/chuck">
             <IonIcon className="chuck-icon" />
             <IonLabel>Chuck Norris</IonLabel>
+          </IonTabButton>
+
+          <IonTabButton tab="Doggos" href="/doggo">
+            <IonIcon className="doggo-icon" />
+            <IonLabel>Doggos</IonLabel>
           </IonTabButton>
 
         </IonTabBar>

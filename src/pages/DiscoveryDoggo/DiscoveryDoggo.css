@@ -1,0 +1,54 @@
+.fourth-tab-content > ion-grid {
+    height: 100%;
+    /* background: url('../../assets/images/dog_background.jpg') no-repeat center center/cover; */
+}
+
+.fourth-tab-header > ion-toolbar , .fourth-tab-page > ion-header{
+    --background: transparent;
+}
+
+.fourth-tab-header > ion-toolbar > ion-title {
+    color: #FFF;
+}
+
+.fourth-tab-header > ion-toolbar > ion-text {
+    margin-left: 1.25rem;
+    color: #FFFFFF88;
+}
+
+.fourth-tab-content > ion-grid > ion-row {
+    height: 100%;
+    align-content: center;
+}
+
+.fourth-tab-content > ion-grid > ion-row > ion-col {
+    display: flex;
+    justify-content: center;
+}
+
+.fourth-tab-content > ion-grid > ion-row > ion-col > ion-card {
+    padding: 0.5rem;
+
+    min-width: 25rem;
+    min-height: 9rem;
+
+}
+
+.fourth-tab-content > ion-grid > ion-row > ion-col > ion-card > ion-item {
+    --background: transparent;
+    --inner-border-width: 0 0 0px 0;
+}
+
+.card-content-md {
+    font-size:  1rem;
+    --color: #000;
+
+}
+
+@media only screen and (max-width: 400px) {
+
+    *  {
+       font-size:  0.9rem;
+    }
+
+ }

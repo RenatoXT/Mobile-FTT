@@ -26,3 +26,10 @@ ion-content {
     width: 1em;
     height: 1em;
 }
+
+.doggo-icon {
+    background: url("../assets/icon/dog.png") no-repeat center center/cover;
+
+    width: 1em;
+    height: 1em;
+}
