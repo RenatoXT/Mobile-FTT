@@ -1,0 +1,77 @@
+
+.third-tab-header > ion-toolbar , .third-tab-page > ion-header{
+    --background: #121212;
+}
+
+.third-tab-header > ion-toolbar > ion-title {
+    color: #FFF;
+}
+
+.third-tab-header > ion-toolbar > ion-text {
+    margin-left: 1.25rem;
+    color: #FFFFFF88;
+}
+
+.third-tab-content  > ion-grid  {
+    height: 100%;
+    background: url('../../assets/images/Chuck-norris.png') no-repeat center center/cover;
+}
+
+.third-tab-content > ion-grid > ion-row {
+    align-content: center;
+}
+
+.third-tab-content > ion-grid > ion-row > ion-col {
+    display: flex;
+    justify-content: center;
+}
+
+.third-tab-content > ion-grid > ion-row > ion-col  > ion-card {
+    transform: translate(50%, 0%);
+
+    max-width: calc(100% - 50%);
+}
+
+.loading-wrapper.sc-ion-loading-md  {
+    --background-color: #FAFAFA;
+    color: #121212;
+    border-radius: 58px;
+}
+
+.chuck-card-icon{
+    background: url("https://assets.chucknorris.host/img/avatar/chuck-norris.png") no-repeat center center/cover;
+
+    width: 1em;
+    height: 1em;
+}
+
+.card-pointer {
+    display: block;
+
+    height: 0;
+	width: 0;
+
+    border-top: 1em solid transparent;
+    border-bottom: 1em solid transparent;
+
+    border-right:1em solid black;
+
+
+    /* right: calc(27.8%); */
+    left: calc(26%);
+    top: calc(80% - 1em)
+}
+
+
+
+@media only screen and (max-width: 400px) {
+    *  {
+       font-size:  0.9rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    ion-item{
+         display: none;
+     }
+ }

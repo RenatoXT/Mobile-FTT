@@ -66,17 +66,17 @@ const App: React.FC = () => (
 
         <IonTabBar slot="bottom">
           <IonTabButton tab="sinner" href="/sinner">
-            <IonIcon icon={warning} />
+            <IonIcon className="devil-icon" />
             <IonLabel>Sinner</IonLabel>
           </IonTabButton>
 
-          <IonTabButton tab="yoda" href="/yoda">
-            <IonIcon icon={textOutline} />
+          <IonTabButton  tab="yoda" href="/yoda">
+            <IonIcon className="yoda-icon" ></IonIcon>
             <IonLabel>Yoda</IonLabel>
           </IonTabButton>
 
           <IonTabButton tab="ChuckRandomJokes" href="/chuck">
-            <IonIcon icon={square} />
+            <IonIcon className="chuck-icon" />
             <IonLabel>Chuck Norris</IonLabel>
           </IonTabButton>
 

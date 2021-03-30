@@ -24,7 +24,7 @@ const EvilInsultGenerator: React.FC = () => {
       <IonHeader class="first-tab-header">
         <IonToolbar>
           <IonTitle>Hell Pills</IonTitle>
-          <IonText>Essa feature foi implementada usando a API "Evil Insult Generator"</IonText>
+          <IonText>This feature are using the Evil Insult Generator API</IonText>
         </IonToolbar>
       </IonHeader>
 
@@ -50,7 +50,7 @@ const EvilInsultGenerator: React.FC = () => {
                 spinner="lines-small"
                 isOpen={showLoading}
                 onDidDismiss={() => setShowLoading(false)}
-                message={'Selecionando o melhor insulto'}
+                message={'Choosing our best insult'}
               />
 
             </IonCol>
