@@ -33,3 +33,9 @@ ion-content {
     width: 1em;
     height: 1em;
 }
+
+    .side-icon {
+        width: 1em;
+        height: 1em;
+        margin-right: 1em;
+    }

@@ -28,7 +28,7 @@ const YodaTextTranslator: React.FC = () => {
       <IonHeader class="second-tab-header">
         <IonToolbar>
           <IonTitle>Yoda Translator</IonTitle>
-          <IonText>This feature are using the Yoda Translator API</IonText>
+          <IonText>This feature is using the Yoda Translator API</IonText>
         </IonToolbar>
       </IonHeader>
 

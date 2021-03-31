@@ -1,18 +1,21 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { skullOutline} from 'ionicons/icons';
 import { IonContent, IonPage, IonIcon, IonGrid, IonRow,
          IonCol, IonCard, IonCardTitle, IonHeader, IonToolbar,
-         IonCardContent, IonItem, IonButton, IonLoading, IonTitle, IonText } from '@ionic/react';
+         IonCardContent, IonItem, IonButton, IonLoading, IonTitle, IonText, IonButtons, IonMenuButton } from '@ionic/react';
 
 import { GetInsult } from '../../hooks/getInsult';
+import { CheckMobile } from '../../hooks/checkMobile'
 
 import './EvilInsultGenerator.css';
 
 const EvilInsultGenerator: React.FC = () => {
 
   const { newInsult, requestInsult } = GetInsult();
+  const { newDevice , isDeviceMobile } = CheckMobile()
   const [showLoading, setShowLoading] = useState(false);
+
 
   useEffect(() => {
     setShowLoading(false)
@@ -23,8 +26,12 @@ const EvilInsultGenerator: React.FC = () => {
 
       <IonHeader class="first-tab-header">
         <IonToolbar>
+          <IonButtons>
+            <IonMenuButton menu="main-menu"></IonMenuButton>
+          </IonButtons>
+
           <IonTitle>Hell Pills</IonTitle>
-          <IonText>This feature are using the Evil Insult Generator API</IonText>
+          <IonText>This feature is using the Evil Insult Generator API</IonText>
         </IonToolbar>
       </IonHeader>
 
@@ -50,7 +57,7 @@ const EvilInsultGenerator: React.FC = () => {
                 spinner="lines-small"
                 isOpen={showLoading}
                 onDidDismiss={() => setShowLoading(false)}
-                message={'Choosing our best insult'}
+                message={'🔥😈  Choosing our best insult'}
               />
 
             </IonCol>

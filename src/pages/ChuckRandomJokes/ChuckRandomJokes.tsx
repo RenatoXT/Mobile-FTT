@@ -26,7 +26,7 @@ const ChuckRandomJokes: React.FC = () => {
     <IonHeader class="third-tab-header">
       <IonToolbar>
         <IonTitle>Chuck Norris Jokes</IonTitle>
-        <IonText>This feature are using the "Chuck Norris" API</IonText>
+        <IonText>This feature is using the "Chuck Norris" API</IonText>
       </IonToolbar>
     </IonHeader>
 

@@ -3,38 +3,22 @@ import { useState } from "react";
 const axios = require('axios')
 
 export interface RespData {
-  breeds: [{}],
   id: string,
   url: string,
   width: number,
-  height: number
+  height: number,
+  name: string,
+  temperament: string
 }
 
 export function DiscoveryDog() {
     const defaultDog: RespData = {
-      breeds: [
-        {
-          weight: {
-            imperial: "23 - 28",
-            metric: "10 - 13"
-          },
-          height: {
-            imperial: "15.5 - 20",
-            metric: "39 - 51"
-          },
-          id: 111,
-          name: "Finnish Spitz",
-          bred_for: "Hunting birds, small mammals",
-          breed_group: "Non-Sporting",
-          life_span: "12 - 15 years",
-          temperament: "Playful, Loyal, Independent, Intelligent, Happy, Vocal",
-          reference_image_id: "3PjHlQbkV"
-        }
-      ],
-      id: "R9ZzdMEnl",
-      url: "https://cdn2.thedogapi.com/images/R9ZzdMEnl.jpg",
-      width: 427,
-      height: 640
+      id: "yxsOLj-GU",
+      url: "https://cdn2.thedogapi.com/images/yxsOLj-GU.jpg",
+      width: 1080,
+      height: 1319,
+      name: "Bearded Collie",
+      temperament: "Self-confidence, Hardy, Lively, Alert, Intelligent, Active"
     }
 
     const [ newDoggo, setNewDoggo ] = useState<RespData>(defaultDog);
@@ -51,7 +35,14 @@ export function DiscoveryDog() {
               "X-Requested-With" : ""
         }})
 
-        setNewDoggo(response.data)
+        setNewDoggo({
+          id: response.data[0].id,
+          url: response.data[0].url,
+          width: response.data[0].width,
+          height: response.data[0].height,
+          name: response.data[0].breeds[0] ? response.data[0].breeds[0].name : "Doggo",
+          temperament: response.data[0].breeds[0] ? response.data[0].breeds[0].temperament : "Horny"
+        })
     }
 
     return {

@@ -1,42 +1,59 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonInput, IonItem, IonLabel,
               IonGrid, IonRow, IonCol, IonCard, IonLoading, IonText, IonButton, IonCardContent,
-              IonTextarea, IonCardHeader, IonCardTitle} from '@ionic/react';
+              IonTextarea, IonCardHeader, IonCardTitle, IonCardSubtitle, IonThumbnail, IonImg} from '@ionic/react';
 
-import { YodaTranslator } from "../../hooks/yodaTranslator"
+import { DiscoveryDog } from "../../hooks/theDogApi"
 
 import './DiscoveryDoggo.css';
 
 
 const DiscoveryDoggo: React.FC = () => {
-  const { newTranslate, requestTranslate } = YodaTranslator()
+  const { newDoggo, requestDoggo } = DiscoveryDog()
 
-  const [text, setText] = useState<string>("");
   const [showLoading, setShowLoading] = useState(false);
 
   useEffect(() => {
     setShowLoading(false)
-  }, [newTranslate]);
+  }, [newDoggo]);
 
   return (
-    <IonPage class="fourth-tab-page">
+    <IonPage className="fourth-tab-page">
 
-      <IonHeader class="fourth-tab-header">
+      <IonHeader className="fourth-tab-header">
         <IonToolbar>
           <IonTitle>Discovery Doggo</IonTitle>
-          <IonText>This feature are using the "The Dog API" API</IonText>
+          <IonText>This feature is using the "The Dog API" API</IonText>
         </IonToolbar>
       </IonHeader>
 
-      <IonContent class="fourth-tab-content " fullscreen>
+      <IonContent className="fourth-tab-content " fullscreen>
         <IonGrid>
           <IonRow>
             <IonCol>
               <IonCard>
+                <img  className="doggo-img" src={newDoggo.url} alt={ "Código do registro: " + newDoggo.id } />
 
-                {/* <IonCardHeader>
-                  <IonCardTitle> Doggo</IonCardTitle>
-                </IonCardHeader> */}
+                <IonCardHeader>
+                  <IonCardSubtitle> { "Temperament: " + newDoggo.temperament } </IonCardSubtitle>
+                  <IonCardTitle> { "Name: " + newDoggo.name } </IonCardTitle>
+                </IonCardHeader>
+
+                <IonCardContent>
+                  <IonText> { "Height: " + newDoggo.height} </IonText>
+                  <br/>
+                  <IonText> { "Width: " + newDoggo.width} </IonText>
+                </IonCardContent>
+
+                <IonItem>
+                      <IonButton
+                        color="warning"
+                        fill="solid"
+                        size="default"
+                        slot="end"
+                        onClick={() => {setShowLoading(true);  requestDoggo() }}
+                      >New Doggo</IonButton>
+                    </IonItem>
 
               </IonCard>
 
@@ -44,7 +61,7 @@ const DiscoveryDoggo: React.FC = () => {
                 spinner="lines-small"
                 isOpen={showLoading}
                 onDidDismiss={() => setShowLoading(false)}
-                message={'Loading your happiness pill'}
+                message={'🐶  Loading your happiness pill '}
               />
 
             </IonCol>

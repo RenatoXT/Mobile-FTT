@@ -1,15 +1,19 @@
 import { Redirect, Route } from 'react-router-dom';
 import {
   IonApp,
+  IonContent,
   IonIcon,
+  IonItem,
   IonLabel,
+  IonList,
+  IonMenu,
+  IonMenuToggle,
   IonRouterOutlet,
   IonTabBar,
   IonTabButton,
   IonTabs,
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, square, warning, textOutline } from 'ionicons/icons';
 
 
 import EvilInsultGenerator from './pages/EvilInsultGenerator/EvilInsultGenerator';
@@ -37,35 +41,53 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import './theme/global.css'
 
-// TO_DO
-// On_Close() --> add hell
-
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
 
+        <IonMenu menuId="main-menu"  contentId="main" >
+          <IonContent>
+            <IonList>
+              <IonMenuToggle>
+                <IonItem routerLink="/sinner">
+                  <IonIcon className="devil-icon  side-icon" />
+                  <IonLabel>Sinner</IonLabel>
+                </IonItem>
+              </IonMenuToggle>
+
+              <IonMenuToggle>
+                <IonItem routerLink="/yoda">
+                  <IonIcon className="yoda-icon  side-icon" ></IonIcon>
+                  <IonLabel>Yoda</IonLabel>
+                </IonItem>
+              </IonMenuToggle>
+
+              <IonMenuToggle>
+                <IonItem routerLink="/chuck">
+                  <IonIcon className="chuck-icon  side-icon" />
+                  <IonLabel>Chuck Norris</IonLabel>
+                </IonItem>
+              </IonMenuToggle>
+
+              <IonMenuToggle>
+                <IonItem routerLink="/doggo">
+                  <IonIcon className="doggo-icon  side-icon" />
+                  <IonLabel>Doggos</IonLabel>
+                </IonItem>
+              </IonMenuToggle>
+            </IonList>
+          </IonContent>
+        </IonMenu>
+
+
       <IonTabs>
 
-        <IonRouterOutlet>
-          <Route exact path="/sinner">
-            <EvilInsultGenerator />
-          </Route>
-
-          <Route exact path="/yoda">
-            <YodaTextTranslator />
-          </Route>
-
-          <Route path="/chuck">
-            <ChuckRandomJokes />
-          </Route>
-
-          <Route exact path="/doggo">
-            <DiscoveryDoggo />
-          </Route>
-
-          <Route exact path="/">
-            <Redirect to="/sinner" />
-          </Route>
+        <IonRouterOutlet id="main">
+          <Route path="/sinner" component={EvilInsultGenerator} exact />
+          <Route path="/yoda" component={YodaTextTranslator} exact />
+          <Route path="/chuck" component={ChuckRandomJokes} exact />
+          <Route path="/doggo" component={DiscoveryDoggo} exact />
+          <Route exact path="/" > <Redirect to="/sinner" /> </Route>
         </IonRouterOutlet>
 
 
@@ -93,6 +115,7 @@ const App: React.FC = () => (
 
         </IonTabBar>
       </IonTabs>
+
     </IonReactRouter>
   </IonApp>
 );
