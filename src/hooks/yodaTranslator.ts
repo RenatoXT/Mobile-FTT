@@ -26,16 +26,16 @@ export function YodaTranslator() {
     }
 
     const [ newTranslate, setNewTranslate ] = useState<RespData>(defaultTranslate);
+    const [ newError, setNewError ] = useState<boolean>(false)
 
     const requestTranslate = async (textToTranslate: string) => {
 
-        let corsAnywhereUrl = "https://cors-anywhere.herokuapp.com/"
         let yodaUrl = "https://api.funtranslations.com/translate/yoda.json"
 
         try {
           const response = await axios({
               method: "POST",
-              url: corsAnywhereUrl + yodaUrl,
+              url: yodaUrl,
               headers: {
                 "X-Requested-With" : ""
             },
@@ -46,13 +46,14 @@ export function YodaTranslator() {
 
           setNewTranslate(response.data)
         } catch (error) {
-          alert("Esta aplicação utiliza o cors anywhere para acessar outras api's que não possuem cors, você está sem  acesso à essa plataforma! \nacesse o site para solicitar: \nhttps://cors-anywhere.herokuapp.com/corsdemo" )
-          setNewTranslate(defaultTranslate)
+          alert(error)
+          setNewError(true)
         }
 
     }
 
     return {
+        newError,
         newTranslate,
         requestTranslate
     }

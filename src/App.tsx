@@ -1,6 +1,6 @@
 import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonContent, IonIcon, IonItem, IonLabel, IonList, IonMenu, IonMenuToggle,
-  IonRouterOutlet, IonTabBar, IonTabButton, IonTabs, StackContext,} from '@ionic/react';
+  IonRouterOutlet, IonTab, IonTabBar, IonTabButton, IonTabs, StackContext,} from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 
 
@@ -28,6 +28,7 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 import './theme/global.css'
+import './theme/navigation.css'
 
 import { ActivePage } from "./hooks/activePage"
 
@@ -89,7 +90,6 @@ const App: React.FC = () => (
           <Route path="/doggo" component={DiscoveryDoggo} exact />
           <Route exact path="/" > <Redirect to="/sinner" /> </Route>
         </IonRouterOutlet>
-
 
         <IonTabBar slot="bottom">
 

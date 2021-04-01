@@ -22,18 +22,20 @@ export function DiscoveryDog() {
     }
 
     const [ newDoggo, setNewDoggo ] = useState<RespData>(defaultDog);
+    const [ newError, setNewError ] = useState<boolean>(false)
 
     const requestDoggo = async () => {
 
-        let corsAnywhereUrl = "https://cors-anywhere.herokuapp.com/"
         let doggoUrl = "https://api.thedogapi.com/v1/images/search"
 
         try {
           const response = await axios({
               method: "GET",
-              url: corsAnywhereUrl + doggoUrl,
+              url: doggoUrl,
               headers: {
-                "X-Requested-With" : ""
+                "X-Requested-With" : "",
+                //Not necessary
+                "x-api-key" : "03d35c97-90be-47f4-880d-0a34bfd08339"
           }})
 
           setNewDoggo({
@@ -45,13 +47,14 @@ export function DiscoveryDog() {
             temperament: response.data[0].breeds[0] ? response.data[0].breeds[0].temperament : "Horny"
           })
         } catch (error) {
-          alert("Esta aplicação utiliza o cors anywhere para acessar outras api's que não possuem cors, você está sem  acesso à essa plataforma! \nacesse o site para solicitar: \nhttps://cors-anywhere.herokuapp.com/corsdemo" )
-          setNewDoggo(defaultDog)
+          alert(error)
+          setNewError(true)
         }
 
     }
 
     return {
+        newError,
         newDoggo,
         requestDoggo
     }

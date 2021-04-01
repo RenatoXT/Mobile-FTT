@@ -25,20 +25,16 @@ export function GetChuckJokes() {
       }
 
     const [ newChuckJokes, setNewChuckJokes ] = useState<ChuckJokes>(defaultChuckJokes);
+    const [ newError, setNewError ] = useState<boolean>(false)
 
     const requestChuckJokes = async () => {
 
-        let corsAnywhereUrl = 'https://cors-anywhere.herokuapp.com/'
         let niceGuyUrl = "https://api.chucknorris.io/jokes/random"
-
-        let finalUrl = corsAnywhereUrl + niceGuyUrl
-
-
 
         try {
             const response = await axios({
                 method: "Get",
-                url: finalUrl,
+                url: niceGuyUrl,
                 headers: {
                     'X-Requested-With' : ''
                 }
@@ -46,13 +42,14 @@ export function GetChuckJokes() {
 
             setNewChuckJokes(response.data)
           } catch (error) {
-            alert("Esta aplicação utiliza o cors anywhere para acessar outras api's que não possuem cors, você está sem  acesso à essa plataforma! \nacesse o site para solicitar: \nhttps://cors-anywhere.herokuapp.com/corsdemo" )
-            setNewChuckJokes(defaultChuckJokes)
+            alert(error)
+            setNewError(true)
           }
 
     }
 
     return {
+        newError,
         newChuckJokes,
         requestChuckJokes
     }

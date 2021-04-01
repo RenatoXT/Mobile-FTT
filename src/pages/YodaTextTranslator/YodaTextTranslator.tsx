@@ -13,14 +13,14 @@ import './YodaTextTranslator.css';
 
 
 const YodaTextTranslator: React.FC = () => {
-  const { newTranslate, requestTranslate } = YodaTranslator()
+  const { newTranslate, requestTranslate, newError  } = YodaTranslator()
 
   const [text, setText] = useState<string>("");
   const [showLoading, setShowLoading] = useState(false);
 
   useEffect(() => {
     setShowLoading(false)
-  }, [newTranslate]);
+  }, [newTranslate, newError ]);
 
   return (
     <IonPage class="second-tab-page">

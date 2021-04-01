@@ -9,13 +9,13 @@ import './DiscoveryDoggo.css';
 
 
 const DiscoveryDoggo: React.FC = () => {
-  const { newDoggo, requestDoggo } = DiscoveryDog()
+  const { newDoggo, requestDoggo, newError  } = DiscoveryDog()
 
   const [showLoading, setShowLoading] = useState(false);
 
   useEffect(() => {
     setShowLoading(false)
-  }, [newDoggo]);
+  }, [newDoggo, newError]);
 
   return (
     <IonPage className="fourth-tab-page">

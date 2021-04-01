@@ -10,12 +10,12 @@ import './ChuckRandomJokes.css';
 
 const ChuckRandomJokes: React.FC = () => {
 
-  const { newChuckJokes, requestChuckJokes } = GetChuckJokes()
+  const { newChuckJokes, requestChuckJokes, newError} = GetChuckJokes()
   const [showLoading, setShowLoading] = useState(false);
 
   useEffect(() => {
     setShowLoading(false)
-}, [newChuckJokes]);
+}, [newChuckJokes, newError]);
 
 
 

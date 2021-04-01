@@ -6,20 +6,20 @@ import { IonContent, IonPage, IonIcon, IonGrid, IonRow,
          IonCardContent, IonItem, IonButton, IonLoading, IonTitle, IonText, IonButtons, IonMenuButton } from '@ionic/react';
 
 import { GetInsult } from '../../hooks/getInsult';
-import { CheckMobile } from '../../hooks/checkMobile'
+// import { CheckMobile } from '../../hooks/checkMobile'
 
 import './EvilInsultGenerator.css';
 
 const EvilInsultGenerator: React.FC = () => {
 
-  const { newInsult, requestInsult } = GetInsult();
-  const { newDevice , isDeviceMobile } = CheckMobile()
+  const { newInsult, requestInsult, newError  } = GetInsult();
+  // const { newDevice , isDeviceMobile } = CheckMobile()
   const [showLoading, setShowLoading] = useState(false);
 
 
   useEffect(() => {
     setShowLoading(false)
-}, [newInsult]);
+}, [newInsult, newError ]);
 
   return (
     <IonPage class="first-tab-page">

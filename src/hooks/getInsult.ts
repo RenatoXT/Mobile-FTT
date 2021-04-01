@@ -26,6 +26,7 @@ export function GetInsult() {
     }
 
     const [ newInsult, setNewInsult ] = useState<Insult>(defaultInsult);
+    const [ newError, setNewError ] = useState<boolean>(false)
 
     const requestInsult = async () => {
 
@@ -47,12 +48,13 @@ export function GetInsult() {
             setNewInsult(response.data)
 
           } catch (error) {
-            alert("Esta aplicação utiliza o cors anywhere para acessar outras api's que não possuem cors, você está sem  acesso à essa plataforma! \nacesse o site para solicitar: \nhttps://cors-anywhere.herokuapp.com/corsdemo" )
-            setNewInsult(defaultInsult)
+            alert("This application uses cors anywhere to access other api's via proxy, you don't have access to that platform! \nAccess the site to request it: \nhttps://cors-anywhere.herokuapp.com/corsdemo" )
+            setNewError(true)
           }
     }
 
     return {
+        newError,
         newInsult,
         requestInsult
     }
