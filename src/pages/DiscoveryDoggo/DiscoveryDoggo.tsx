@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonInput, IonItem, IonLabel,
               IonGrid, IonRow, IonCol, IonCard, IonLoading, IonText, IonButton, IonCardContent,
-              IonTextarea, IonCardHeader, IonCardTitle, IonCardSubtitle, IonThumbnail, IonImg} from '@ionic/react';
+              IonTextarea, IonCardHeader, IonCardTitle, IonCardSubtitle, IonThumbnail, IonImg, IonButtons, IonMenuButton} from '@ionic/react';
 
 import { DiscoveryDog } from "../../hooks/theDogApi"
 
@@ -22,6 +22,9 @@ const DiscoveryDoggo: React.FC = () => {
 
       <IonHeader className="fourth-tab-header">
         <IonToolbar>
+          <IonButtons slot="start">
+            <IonMenuButton menu="main-menu"></IonMenuButton>
+          </IonButtons>
           <IonTitle>Discovery Doggo</IonTitle>
           <IonText>This feature is using the "The Dog API" API</IonText>
         </IonToolbar>

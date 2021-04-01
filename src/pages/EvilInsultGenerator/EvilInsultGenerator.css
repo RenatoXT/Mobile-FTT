@@ -4,7 +4,7 @@
 }
 
 .first-tab-header > ion-toolbar , .first-tab-page > ion-header{
-    --background: transparent;
+    --background: #121212;
 }
 
 .first-tab-header > ion-toolbar > ion-title {
@@ -55,11 +55,3 @@
     --color: #000;
 
 }
-
-@media only screen and (max-width: 400px) {
-
-    *  {
-       font-size:  0.9rem;
-    }
-
- }

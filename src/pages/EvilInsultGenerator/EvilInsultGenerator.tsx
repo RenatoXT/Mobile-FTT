@@ -26,12 +26,11 @@ const EvilInsultGenerator: React.FC = () => {
 
       <IonHeader class="first-tab-header">
         <IonToolbar>
-          <IonButtons>
+          <IonButtons slot="start">
             <IonMenuButton menu="main-menu"></IonMenuButton>
           </IonButtons>
-
-          <IonTitle>Hell Pills</IonTitle>
-          <IonText>This feature is using the Evil Insult Generator API</IonText>
+            <IonTitle>Hell Pills</IonTitle>
+            <IonText>This feature is using the Evil Insult Generator API</IonText>
         </IonToolbar>
       </IonHeader>
 

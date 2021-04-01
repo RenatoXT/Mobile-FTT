@@ -1,10 +1,10 @@
 .fourth-tab-content > ion-grid {
     height: 100%;
-    /* background: url('../../assets/images/dog_background.jpg') no-repeat center center/cover; */
+    background: url('../../assets/images/dog_background.jpg') no-repeat center center/cover;
 }
 
 .fourth-tab-header > ion-toolbar , .fourth-tab-page > ion-header{
-    --background: transparent;
+    --background: #121212;
 }
 
 .fourth-tab-header > ion-toolbar > ion-title {
@@ -29,10 +29,12 @@
 .fourth-tab-content > ion-grid > ion-row > ion-col > ion-card {
     padding: 0.5rem;
 
+    border: 2px solid #EEE;
+    /* padding: 1px; */
+
     min-width: 25rem;
     min-height: 9rem;
     max-width: 50em;
-    max-height: 40em;
 
 }
 
@@ -48,19 +50,8 @@
 }
 
 .doggo-img {
-    /* max-width: 100%; */
     max-height: 25em;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
-
-
-
-@media only screen and (max-width: 400px) {
-
-    *  {
-       font-size:  0.9rem;
-    }
-
- }

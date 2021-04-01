@@ -1,18 +1,6 @@
 import { Redirect, Route } from 'react-router-dom';
-import {
-  IonApp,
-  IonContent,
-  IonIcon,
-  IonItem,
-  IonLabel,
-  IonList,
-  IonMenu,
-  IonMenuToggle,
-  IonRouterOutlet,
-  IonTabBar,
-  IonTabButton,
-  IonTabs,
-} from '@ionic/react';
+import { IonApp, IonContent, IonIcon, IonItem, IonLabel, IonList, IonMenu, IonMenuToggle,
+  IonRouterOutlet, IonTabBar, IonTabButton, IonTabs, StackContext,} from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 
 
@@ -41,14 +29,26 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import './theme/global.css'
 
+import { ActivePage } from "./hooks/activePage"
+
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
 
         <IonMenu menuId="main-menu"  contentId="main" >
           <IonContent>
-            <IonList>
-              <IonMenuToggle>
+
+            <div className="menu-header-bg"></div>
+            <div className="header-content">
+              <IonIcon className="ftt-logo"/>
+              <IonLabel>
+                <h2>FTT</h2>
+                <p>Computer Engineering</p>
+              </IonLabel>
+            </div>
+
+            <IonList className="menu-items" lines="none">
+              <IonMenuToggle  >
                 <IonItem routerLink="/sinner">
                   <IonIcon className="devil-icon  side-icon" />
                   <IonLabel>Sinner</IonLabel>
@@ -56,7 +56,7 @@ const App: React.FC = () => (
               </IonMenuToggle>
 
               <IonMenuToggle>
-                <IonItem routerLink="/yoda">
+                <IonItem  routerLink="/yoda">
                   <IonIcon className="yoda-icon  side-icon" ></IonIcon>
                   <IonLabel>Yoda</IonLabel>
                 </IonItem>

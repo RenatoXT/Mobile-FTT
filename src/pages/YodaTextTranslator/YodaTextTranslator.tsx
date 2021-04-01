@@ -1,8 +1,8 @@
 
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonInput, IonItem, IonLabel,
               IonGrid, IonRow, IonCol, IonCard, IonLoading, IonText, IonButton, IonCardContent,
-              IonTextarea, IonCardHeader, IonCardTitle} from '@ionic/react';
+              IonTextarea, IonCardHeader, IonCardTitle, IonButtons, IonMenuButton} from '@ionic/react';
 
 import { YodaTranslator } from "../../hooks/yodaTranslator"
 
@@ -27,6 +27,9 @@ const YodaTextTranslator: React.FC = () => {
 
       <IonHeader class="second-tab-header">
         <IonToolbar>
+        <IonButtons slot="start">
+            <IonMenuButton menu="main-menu"></IonMenuButton>
+          </IonButtons>
           <IonTitle>Yoda Translator</IonTitle>
           <IonText>This feature is using the Yoda Translator API</IonText>
         </IonToolbar>

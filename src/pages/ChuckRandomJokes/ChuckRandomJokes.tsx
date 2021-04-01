@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { IonAvatar, IonButton, IonCard, IonCardContent, IonCardTitle, IonChip, IonCol, IonContent, IonFab, IonFabButton, IonGrid, IonHeader, IonIcon, IonItem, IonLabel, IonLoading, IonPage, IonRow, IonText, IonTitle, IonToolbar } from '@ionic/react';
+import { IonAvatar, IonButton, IonButtons, IonCard, IonCardContent, IonCardTitle, IonChip, IonCol, IonContent, IonFab, IonFabButton, IonGrid, IonHeader, IonIcon, IonItem, IonLabel, IonLoading, IonMenuButton, IonPage, IonRow, IonText, IonTitle, IonToolbar } from '@ionic/react';
 import { closeCircle, refresh, sad, skullOutline } from 'ionicons/icons';
 
 import { GetChuckJokes } from "../../hooks/chuckJokes"
@@ -25,6 +25,9 @@ const ChuckRandomJokes: React.FC = () => {
 
     <IonHeader class="third-tab-header">
       <IonToolbar>
+          <IonButtons slot="start">
+            <IonMenuButton menu="main-menu"></IonMenuButton>
+          </IonButtons>
         <IonTitle>Chuck Norris Jokes</IonTitle>
         <IonText>This feature is using the "Chuck Norris" API</IonText>
       </IonToolbar>
@@ -35,24 +38,13 @@ const ChuckRandomJokes: React.FC = () => {
       <IonGrid>
         <IonRow>
           <IonCol>
-
-
-          {/* <IonItem  className="card-pointer"></IonItem> */}
-
           <IonCard className="ion-card-speak" >
                 <IonItem>
                   <IonIcon className="chuck-card-icon" size="large" slot="start" />
-
                   <IonCardTitle> Chuck 24:69</IonCardTitle>
-
-                  {/* <IonButton color="danger" fill="outline" slot="end" onClick={() => { setShowLoading(true); requestChuckJokes() }}>Refresh</IonButton> */}
                 </IonItem>
-
                 <IonCardContent> { newChuckJokes.value } </IonCardContent>
-
           </IonCard>
-
-
           </IonCol>
         </IonRow>
       </IonGrid>
@@ -64,9 +56,6 @@ const ChuckRandomJokes: React.FC = () => {
                 onDidDismiss={() => setShowLoading(false)}
                 message={'👊🏼 Loading a new chuck prophecy'}
               />
-
-
-
 
       <IonFab   vertical="bottom" horizontal="end" slot="fixed">
         <IonFabButton color="warning" onClick={() => { setShowLoading(true); requestChuckJokes() }} >

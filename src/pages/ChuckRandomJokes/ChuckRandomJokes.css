@@ -62,16 +62,8 @@
     top: calc(80% - 1em)
 }
 
-
-
-@media only screen and (max-width: 400px) {
-    *  {
-       font-size:  0.9rem;
-    }
-}
-
 @media only screen and (max-width: 450px) {
-    ion-item{
+    .ion-card-speak > ion-item{
          display: none;
      }
  }
