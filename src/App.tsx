@@ -1,6 +1,6 @@
 import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonContent, IonIcon, IonItem, IonLabel, IonList, IonMenu, IonMenuToggle,
-  IonRouterOutlet, IonTab, IonTabBar, IonTabButton, IonTabs, StackContext,} from '@ionic/react';
+  IonRouterOutlet, IonTabBar, IonTabButton, IonTabs,} from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 
 
@@ -30,7 +30,7 @@ import './theme/variables.css';
 import './theme/global.css'
 import './theme/navigation.css'
 
-import { ActivePage } from "./hooks/activePage"
+// import { ActivePage } from "./hooks/activePage"
 
 const App: React.FC = () => (
   <IonApp>
@@ -52,28 +52,28 @@ const App: React.FC = () => (
               <IonMenuToggle  >
                 <IonItem routerLink="/sinner">
                   <IonIcon className="devil-icon  side-icon" />
-                  <IonLabel>Sinner</IonLabel>
+                  <IonLabel id="side-menu-label">Sinner</IonLabel>
                 </IonItem>
               </IonMenuToggle>
 
               <IonMenuToggle>
                 <IonItem  routerLink="/yoda">
                   <IonIcon className="yoda-icon  side-icon" ></IonIcon>
-                  <IonLabel>Yoda</IonLabel>
+                  <IonLabel id="side-menu-label">Yoda</IonLabel>
                 </IonItem>
               </IonMenuToggle>
 
               <IonMenuToggle>
                 <IonItem routerLink="/chuck">
                   <IonIcon className="chuck-icon  side-icon" />
-                  <IonLabel>Chuck Norris</IonLabel>
+                  <IonLabel id="side-menu-label">Chuck Norris</IonLabel>
                 </IonItem>
               </IonMenuToggle>
 
               <IonMenuToggle>
                 <IonItem routerLink="/doggo">
                   <IonIcon className="doggo-icon  side-icon" />
-                  <IonLabel>Doggos</IonLabel>
+                  <IonLabel id="side-menu-label">Doggos</IonLabel>
                 </IonItem>
               </IonMenuToggle>
             </IonList>

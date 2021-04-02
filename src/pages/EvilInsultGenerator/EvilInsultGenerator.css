@@ -50,6 +50,17 @@
     --background: transparent;
 }
 
+.first-tab-content > ion-grid > ion-row > ion-col > ion-card > ion-item > ion-card-title {
+    color: #000;
+}
+
+.sinner-icon {
+    background: url("../../assets/icon/elmo_burning.png") no-repeat center center/cover;
+
+    height: 1.5em;
+    width: 2em;
+}
+
 .card-content-md {
     font-size:  1rem;
     --color: #000;

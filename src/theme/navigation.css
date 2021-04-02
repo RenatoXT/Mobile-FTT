@@ -66,8 +66,8 @@ ion-menu-toggle > ion-item , ion-list{
 --background: #121212;
 }
 
-.item.sc-ion-label-md-h, .item .sc-ion-label-md-h {
-color: #FFF;
+#side-menu-label {
+    color: #FFF;
 }
 
 .list-md {

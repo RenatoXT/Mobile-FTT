@@ -32,12 +32,6 @@
     max-width: calc(100% - 50%);
 }
 
-.loading-wrapper.sc-ion-loading-md  {
-    --background-color: #FAFAFA;
-    color: #121212;
-    border-radius: 58px;
-}
-
 .chuck-card-icon{
     background: url("https://assets.chucknorris.host/img/avatar/chuck-norris.png") no-repeat center center/cover;
 

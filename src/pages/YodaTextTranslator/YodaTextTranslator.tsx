@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonInput, IonItem, IonLabel,
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonItem, IonLabel,
               IonGrid, IonRow, IonCol, IonCard, IonLoading, IonText, IonButton, IonCardContent,
               IonTextarea, IonCardHeader, IonCardTitle, IonButtons, IonMenuButton} from '@ionic/react';
 
@@ -42,13 +42,17 @@ const YodaTextTranslator: React.FC = () => {
               <IonCard>
 
                 <IonCardHeader>
-                  <IonCardTitle> Translated: { newTranslate.contents.translated }</IonCardTitle>
+                  <IonCardTitle>
+                    Translated:
+                    <br/>
+                    { newTranslate.contents.translated }
+                    </IonCardTitle>
                 </IonCardHeader>
 
 
                 <IonCardContent>
                   <IonItem>
-                    <IonLabel position="stacked" color="primary" >Translate to Yoda </IonLabel >
+                    <IonLabel position="stacked" color="dark"  >English to Yoda Wise Words </IonLabel >
                     <IonTextarea
                       value={text}
                       autoGrow= {true}
@@ -69,6 +73,12 @@ const YodaTextTranslator: React.FC = () => {
                       >Traduzir</IonButton>
                     </IonItem>
 
+                  {
+                    newError && <>
+                      <br/>
+                      <IonButton color="warning" expand="full" target="_blank" rel="noopener noreferrer" href="https://cors-anywhere.herokuapp.com/corsdemo">Request Cors-Anywhere Access</IonButton>
+                    </>
+                  }
               </IonCard>
 
               <IonLoading

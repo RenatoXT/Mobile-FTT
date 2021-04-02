@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { IonAvatar, IonButton, IonButtons, IonCard, IonCardContent, IonCardTitle, IonChip, IonCol, IonContent, IonFab, IonFabButton, IonGrid, IonHeader, IonIcon, IonItem, IonLabel, IonLoading, IonMenuButton, IonPage, IonRow, IonText, IonTitle, IonToolbar } from '@ionic/react';
-import { closeCircle, refresh, sad, skullOutline } from 'ionicons/icons';
+import { IonButtons, IonCard, IonCardContent, IonCardTitle, IonCol, IonContent, IonFab, IonFabButton, IonGrid, IonHeader, IonIcon, IonItem, IonLoading, IonMenuButton, IonPage, IonRow, IonText, IonTitle, IonToolbar } from '@ionic/react';
+import { sad } from 'ionicons/icons';
 
 import { GetChuckJokes } from "../../hooks/chuckJokes"
 

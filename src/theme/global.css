@@ -34,6 +34,11 @@ ion-content {
     height: 1em;
 }
 
+/* Sppiner */
+.loading-wrapper.sc-ion-loading-md  {
+    border-radius: 58px;
+}
+
 /* Change font size on small screens */
 @media only screen and (max-width: 400px) {
     *  {

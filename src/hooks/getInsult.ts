@@ -45,10 +45,12 @@ export function GetInsult() {
                 }
             })
 
+            setNewError(false)
             setNewInsult(response.data)
 
           } catch (error) {
             alert("This application uses cors anywhere to access other api's via proxy, you don't have access to that platform! \nAccess the site to request it: \nhttps://cors-anywhere.herokuapp.com/corsdemo" )
+            setNewError(false)
             setNewError(true)
           }
     }

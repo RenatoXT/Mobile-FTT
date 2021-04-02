@@ -30,12 +30,15 @@ export function YodaTranslator() {
 
     const requestTranslate = async (textToTranslate: string) => {
 
-        let yodaUrl = "https://api.funtranslations.com/translate/yoda.json"
+      let corsAnywhereUrl = 'https://cors-anywhere.herokuapp.com/'
+      let yodaUrl = "https://api.funtranslations.com/translate/yoda.json"
+
+      let finalUrl = corsAnywhereUrl + yodaUrl
 
         try {
           const response = await axios({
               method: "POST",
-              url: yodaUrl,
+              url: finalUrl,
               headers: {
                 "X-Requested-With" : ""
             },
@@ -43,10 +46,11 @@ export function YodaTranslator() {
                   text: textToTranslate
               }
           })
-
+          setNewError(false)
           setNewTranslate(response.data)
         } catch (error) {
           alert(error)
+          setNewError(false)
           setNewError(true)
         }
 

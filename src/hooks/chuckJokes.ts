@@ -39,10 +39,11 @@ export function GetChuckJokes() {
                     'X-Requested-With' : ''
                 }
             })
-
+            setNewError(false)
             setNewChuckJokes(response.data)
           } catch (error) {
             alert(error)
+            setNewError(false)
             setNewError(true)
           }
 

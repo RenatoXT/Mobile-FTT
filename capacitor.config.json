@@ -1,6 +1,6 @@
 {
   "appId": "io.ionic.starter",
-  "appName": "LPES",
+  "appName": "Mobile-FTT",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "build",
@@ -9,6 +9,5 @@
       "launchShowDuration": 0
     }
   },
-  "cordova": {},
-  "linuxAndroidStudioPath": "/home/renatoxt/Android/android-studio/bin/studio.sh"
+  "cordova": {}
 }

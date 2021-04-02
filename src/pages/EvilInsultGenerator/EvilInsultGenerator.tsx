@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 
-import { skullOutline} from 'ionicons/icons';
 import { IonContent, IonPage, IonIcon, IonGrid, IonRow,
          IonCol, IonCard, IonCardTitle, IonHeader, IonToolbar,
          IonCardContent, IonItem, IonButton, IonLoading, IonTitle, IonText, IonButtons, IonMenuButton } from '@ionic/react';
@@ -41,7 +40,7 @@ const EvilInsultGenerator: React.FC = () => {
             <IonCol>
               <IonCard>
                 <IonItem>
-                  <IonIcon icon={skullOutline} size="large" slot="start" />
+                  <IonIcon className="sinner-icon" size="large" slot="start" />
 
                   <IonCardTitle>Heeeello Little Sinner </IonCardTitle>
 
@@ -50,6 +49,12 @@ const EvilInsultGenerator: React.FC = () => {
 
                 <IonCardContent> { newInsult?.insult } </IonCardContent>
 
+                  {
+                    newError && <>
+                      <br/>
+                      <IonButton color="warning" expand="full" target="_blank" rel="noopener noreferrer" href="https://cors-anywhere.herokuapp.com/corsdemo">Request Cors-Anywhere Access</IonButton>
+                    </>
+                  }
               </IonCard>
 
               <IonLoading
@@ -62,6 +67,7 @@ const EvilInsultGenerator: React.FC = () => {
             </IonCol>
 
           </IonRow>
+
         </IonGrid>
       </IonContent>
     </IonPage>

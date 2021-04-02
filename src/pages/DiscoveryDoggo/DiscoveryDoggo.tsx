@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonInput, IonItem, IonLabel,
-              IonGrid, IonRow, IonCol, IonCard, IonLoading, IonText, IonButton, IonCardContent,
-              IonTextarea, IonCardHeader, IonCardTitle, IonCardSubtitle, IonThumbnail, IonImg, IonButtons, IonMenuButton} from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonItem, IonGrid, IonRow, IonCol, IonCard, IonLoading, IonText, IonButton, IonCardContent,
+              IonCardHeader, IonCardTitle, IonButtons, IonMenuButton} from '@ionic/react';
 
 import { DiscoveryDog } from "../../hooks/theDogApi"
 
@@ -38,14 +37,11 @@ const DiscoveryDoggo: React.FC = () => {
                 <img  className="doggo-img" src={newDoggo.url} alt={ "Código do registro: " + newDoggo.id } />
 
                 <IonCardHeader>
-                  <IonCardSubtitle> { "Temperament: " + newDoggo.temperament } </IonCardSubtitle>
-                  <IonCardTitle> { "Name: " + newDoggo.name } </IonCardTitle>
+                  <IonCardTitle> { "Breed name: " + newDoggo.name } </IonCardTitle>
                 </IonCardHeader>
 
                 <IonCardContent>
-                  <IonText> { "Height: " + newDoggo.height} </IonText>
-                  <br/>
-                  <IonText> { "Width: " + newDoggo.width} </IonText>
+                  <IonText> { "Temperament: " + newDoggo.temperament }  </IonText>
                 </IonCardContent>
 
                 <IonItem>
