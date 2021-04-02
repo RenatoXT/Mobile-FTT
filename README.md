@@ -98,14 +98,31 @@ npm run build-android-debug
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+<details >
+  <summary>Mobile</summary>
+  <ol>
+    <img src="https://github.com/RenatoXT/Mobile-FTT/tree/ public/assets/gifs/Mobile.gif" alt="Mobile-FTT on mobile device (dark mode)">
+  </ol>
+</details>
+
+<details>
+  <summary>Web</summary>
+  <ol>
+    <img src="https://github.com/RenatoXT/Mobile-FTT/tree/ public/assets/gifs/Web.gif" alt="Mobile-FTT on mobile device (dark mode)">
+  </ol>
+</details>
+
+
 
 
 <!-- Authors -->
 ## Authors
 
 Renato Xavier Tavares
+<br>
 Lucas Araújo Veloso
+<br>
 Davi Oliveira Chagas Almeida
+<br>
 
 Project Link: [Mobile-FTT](https://github.com/RenatoXT/Mobile-FTT)

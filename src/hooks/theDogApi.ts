@@ -29,9 +29,7 @@ export function DiscoveryDog() {
               method: "GET",
               url: doggoUrl,
               headers: {
-                "X-Requested-With" : "",
-                //Not necessary
-                "x-api-key" : "03d35c97-90be-47f4-880d-0a34bfd08339"
+                "X-Requested-With" : ""
           }})
 
           setNewDoggo({
