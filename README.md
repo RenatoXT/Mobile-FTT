@@ -101,14 +101,14 @@ npm run build-android-debug
 <details >
   <summary>Mobile</summary>
   <ol>
-    <img src="https://github.com/RenatoXT/Mobile-FTT/tree/ public/assets/gifs/Mobile.gif" alt="Mobile-FTT on mobile device (dark mode)">
+    <img src="https://github.com/RenatoXT/Mobile-FTT/blob/main/public/assets/gifs/Mobile.gif" height="720" alt="Mobile-FTT on mobile device (dark mode)">
   </ol>
 </details>
 
 <details>
   <summary>Web</summary>
   <ol>
-    <img src="https://github.com/RenatoXT/Mobile-FTT/tree/ public/assets/gifs/Web.gif" alt="Mobile-FTT on mobile device (dark mode)">
+    <img src="https://github.com/RenatoXT/Mobile-FTT/blob/main/public/assets/gifs/Web.gif" alt="Mobile-FTT on mobile device (dark mode)">
   </ol>
 </details>
 
