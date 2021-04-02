@@ -52,7 +52,7 @@ const YodaTextTranslator: React.FC = () => {
 
                 <IonCardContent>
                   <IonItem>
-                    <IonLabel position="stacked" color="dark"  >English to Yoda Wise Words </IonLabel >
+                    <IonLabel position="stacked" color="dark"  >English to Yodish </IonLabel >
                     <IonTextarea
                       value={text}
                       autoGrow= {true}

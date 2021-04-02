@@ -44,7 +44,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "ionic-compile" : "ionic build && ionic cap add android",
+    "ionic-compile": "ionic build && ionic cap add android",
     "ionic-att": "ionic build && ionic cap copy && ionic cap sync",
     "build-debug": "npm run ionic-att && cd android && ./gradlew assembleDebug",
     "build-release": "npm run ionic-att && cd android && ./gradlew assembleRelease",
