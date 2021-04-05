@@ -55,6 +55,7 @@ const ChuckRandomJokes: React.FC = () => {
                 isOpen={showLoading}
                 onDidDismiss={() => setShowLoading(false)}
                 message={'👊🏼 Loading a new chuck prophecy'}
+                duration={5000}
               />
 
       <IonFab   vertical="bottom" horizontal="end" slot="fixed">

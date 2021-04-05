@@ -61,6 +61,7 @@ const DiscoveryDoggo: React.FC = () => {
                 isOpen={showLoading}
                 onDidDismiss={() => setShowLoading(false)}
                 message={'🐶  Loading your happiness pill '}
+                duration={5000}
               />
 
             </IonCol>
